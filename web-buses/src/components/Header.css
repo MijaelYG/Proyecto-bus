@@ -1,0 +1,30 @@
+.main-header{
+    background-image: linear-gradient(90deg,rgb(81, 0, 231), 
+    rgb(183, 0, 255), rgb(81, 0, 231));
+    height: 100px;
+    display: flex;
+    position: relative;
+}
+
+.title-header{
+    margin: auto;
+}
+
+.title{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.author{
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    align-self: center;
+    padding-right: 30px;
+    font-weight: 500;
+}
