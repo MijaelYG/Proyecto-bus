@@ -28,3 +28,21 @@
     padding-right: 30px;
     font-weight: 500;
 }
+
+.logociva{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    margin-left: 30px;
+    width: 130px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.logociva img{
+    display: block;
+    margin: auto;
+    width: 100%;
+}

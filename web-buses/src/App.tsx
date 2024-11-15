@@ -2,7 +2,7 @@ import "./App.css";
 
 import Header from "./components/Header.tsx";
 import Functionbtn from "./components/Functionbtn.tsx";
-import Contentbus from "./components/Contentbus.tsx";
+import ContentTotal from "./components/ContentTotal.tsx";
 
 function App() {
   return (
@@ -10,8 +10,7 @@ function App() {
       <div className="app">
         <Header />
         <Functionbtn />
-        <Contentbus />
-        PRUEBA
+        <ContentTotal></ContentTotal>
       </div>
     </>
   );

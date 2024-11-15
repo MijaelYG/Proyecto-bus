@@ -1,0 +1,38 @@
+
+.main-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-btn{
+    display: flex;
+    margin: auto;
+}
+.btn{
+    display: flex;
+    background-color: rgb(255, 36, 244);
+    margin: 0px 15px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-active{
+    display: flex;
+    background-color: rgb(160, 0, 152);
+    margin: 0px 15px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    cursor:default;
+    color: white;
+    font-weight: 700;
+    transition: 0.2s;   
+}
+
+.btn:hover{
+    background-color: rgb(177, 1, 168);
+}

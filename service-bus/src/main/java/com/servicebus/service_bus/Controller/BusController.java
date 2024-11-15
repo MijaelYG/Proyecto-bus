@@ -3,6 +3,8 @@ package com.servicebus.service_bus.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -38,30 +40,11 @@ public class BusController {
         }
     }
 
-    @PostMapping()
-    public ResponseEntity<?> create(@RequestBody BusDTO busDTO) {
-        try {
-            return new ResponseEntity<>("Create Result", HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @GetMapping("/paginacion")
+    public Page<BusDTO> getPaginatedBuses(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        return busService.PaginacionBus(PageRequest.of(page, size));
     }
-
-    @PutMapping()
-    public ResponseEntity<?> update(@RequestBody BusDTO busDTO) {
-        try {
-            return new ResponseEntity<>("Update Result", HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable Integer id) {
-        try {
-            return new ResponseEntity<>("Destroy Result", HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+    
 }

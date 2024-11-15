@@ -1,19 +1,12 @@
 import "./Contentbus.css";
 
-import { Bus } from "../Service/BusService"
-import { fetchBus } from "../Service/BusService";
-import { useEffect, useState } from "react";
+import { Bus } from "../Service/BusService";
 
-const Contentbus = () => {
-    const [buses,setBuses] =useState<Bus[]>([])
+interface BusContent {
+  buses: Bus[];
+}
 
-    useEffect(() => {
-        const getBuses = async () => {
-            const Busdata = await fetchBus();
-            setBuses(Busdata)
-        };
-        getBuses();
-    }, []);
+const Contentbus = ({ buses }: BusContent) => {
     
   return (
     <div className="main-tablabus">
